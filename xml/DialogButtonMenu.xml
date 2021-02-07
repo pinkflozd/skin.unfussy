@@ -78,6 +78,18 @@
                         <visible>System.CanReboot</visible>
                     </item>
                     <item>
+						<label>Reboot to Android TV</label>
+                        <icon>icons/powermenu/reboot.png</icon>
+						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+						<onclick>Reset()</onclick>
+						<visible>System.CanReboot</visible>
+					</item>
+					<item>
+						<label>Restart Kodi</label>
+                        <icon>icons/powermenu/reboot.png</icon>
+						<onclick>RestartApp()</onclick>
+					</item>
+                    <item>
                         <label>$LOCALIZE[20126] $INFO[system.profilename]</label>
                         <icon>icons/powermenu/logoff.png</icon>
                         <onclick>dialog.close(all,true)</onclick>

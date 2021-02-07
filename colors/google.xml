@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+    <color name="disabled">FF333333</color>
+    <color name="selected">FFecc483</color>
+    <color name="background">DD212121</color>
+    <color name="backgrounddark">FF212121</color>
+    <color name="backgroundtransparent">DD111111</color>
+    <color name="backgroundtransparentdark">EE111111</color>
+    <color name="backgroundtransparentbright">DD212121</color>
+    <color name="darkenposters">CC111111</color>
+    <color name="active">FF1976d2</color>
+    <color name="activedialog">FF1976d2</color>
+    <color name="activedialogdark">FF004ba0</color>
+    <color name="activetransparent">331976d2</color>
+    <color name="timeshiftbar">FFd27619</color>
+    <color name="border">FF212121</color>
+    <color name="borderdark">FF111111</color>
+    <color name="inactive">FF777777</color>
+    <color name="white">FFF5F5F5</color>
+    <color name="black">FF111111</color>
+    <color name="red">FFD32F2F</color>
+    <color name="green">FF388E3C</color>
+    <color name="blue">FF0288D1</color>
+</colors>

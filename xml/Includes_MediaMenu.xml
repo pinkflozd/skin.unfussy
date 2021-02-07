@@ -54,7 +54,7 @@
                     <label2>[B]$INFO[Control.GetLabel(29)][/B]</label2>
                     <texturefocus colordiffuse="active">backgrounds/overlay_background.png</texturefocus>
                     <texturenofocus colordiffuse="backgroundtransparent">colors/white.png</texturenofocus>
-                    <onclick>NextChannelGroup</onclick>
+                    <onclick>SendClick(28)</onclick>
                 </control>
                 <control type="button" id="1005">
                     <description>PVR Channel Groups</description>
@@ -69,7 +69,7 @@
                     <label2>[B]$INFO[Control.GetLabel(30)][/B]</label2>
                     <texturefocus colordiffuse="active">backgrounds/overlay_background.png</texturefocus>
                     <texturenofocus colordiffuse="backgroundtransparent">colors/white.png</texturenofocus>
-                    <onclick>NextChannelGroup</onclick>
+                    <onclick>SendClick(28)</onclick>
                 </control>
                 <control type="button" id="1003">
                     <height>60</height>

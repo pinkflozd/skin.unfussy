@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<includes>
+  <include name="home_mainmenu_content">
+    <content>
+      <item>
+        <label>$LOCALIZE[20343]</label>
+        <thumb>icons/mainmenu/tv.png</thumb>
+        <onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+        <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,sources://video/,return)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>Movies</label>
+        <thumb>icons/mainmenu/xsp.png</thumb>
+        <onclick>ActivateWindow(Videos,special://profile/playlists/video/Movies.xsp,return)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>Erik</label>
+        <thumb>icons/mainmenu/xsp.png</thumb>
+        <onclick>ActivateWindow(Videos,special://profile/playlists/video/Erik.xsp,return)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>Channels</label>
+        <thumb>DefaultAddonPeripheral.png</thumb>
+        <onclick>ActivateWindow(TVChannels)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[10]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19021]</label>
+        <thumb>icons/mainmenu/radio.png</thumb>
+        <onclick>Action(PlayPvrRadio)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[20]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[24001]</label>
+        <thumb>icons/mainmenu/addons.png</thumb>
+        <onclick>ActivateWindow(addonbrowser)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[3]</label>
+        <thumb>icons/mainmenu/videos.png</thumb>
+        <onclick>ActivateWindow(Videos)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[10134]</label>
+        <thumb>icons/mainmenu/favourites.png</thumb>
+        <onclick>ActivateWindow(favourites)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+        <property name="submenu_id">$NUMBER[0]</property>
+      </item>
+    </content>
+  </include>
+  <include name="home_mainmenu_submenus">
+    <include content="home_submenu">
+      <param name="id">10</param>
+    </include>
+    <include content="home_submenu">
+      <param name="id">20</param>
+    </include>
+  </include>
+  <include name="home_submenu_content_id_10">
+    <content>
+      <item>
+        <label>$LOCALIZE[19019]</label>
+        <thumb>DefaultAddonPeripheral.png</thumb>
+        <onclick>ActivateWindow(TVChannels)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19069]</label>
+        <thumb>icons/pvr/epg.png</thumb>
+        <onclick>ActivateWindow(TVGuide)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19017]</label>
+        <thumb>icons/pvr/recording_small.png</thumb>
+        <onclick>ActivateWindow(TVRecordings)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19040]</label>
+        <thumb>icons/pvr/timer_small.png</thumb>
+        <onclick>ActivateWindow(TVTimers)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19138]</label>
+        <thumb>icons/pvr/timer-rule.png</thumb>
+        <onclick>ActivateWindow(TVTimerRules)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[137]</label>
+        <thumb>DefaultAddonsSearch.png</thumb>
+        <onclick>ActivateWindow(TVSearch)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+    </content>
+  </include>
+  <include name="home_submenu_content_id_20">
+    <content>
+      <item>
+        <label>$LOCALIZE[19019]</label>
+        <thumb>DefaultAddonPeripheral.png</thumb>
+        <onclick>ActivateWindow(RadioChannels)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19069]</label>
+        <thumb>icons/pvr/epg.png</thumb>
+        <onclick>ActivateWindow(RadioGuide)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19017]</label>
+        <thumb>icons/pvr/recording_small.png</thumb>
+        <onclick>ActivateWindow(RadioRecordings)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19040]</label>
+        <thumb>icons/pvr/timer_small.png</thumb>
+        <onclick>ActivateWindow(RadioTimers)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[19138]</label>
+        <thumb>icons/pvr/timer-rule.png</thumb>
+        <onclick>ActivateWindow(RadioTimerRules)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+      <item>
+        <label>$LOCALIZE[137]</label>
+        <thumb>DefaultAddonsSearch.png</thumb>
+        <onclick>ActivateWindow(RadioSearch)</onclick>
+        <property name="thumbsize">$NUMBER[0]</property>
+      </item>
+    </content>
+  </include>
+</includes>

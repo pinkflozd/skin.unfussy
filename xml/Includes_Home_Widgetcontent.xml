@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='utf-8'?>
+<includes>
+  <include name="home_widget_content">
+    <include content="widget_mainmenu">
+      <param name="id">500</param>
+      <param name="header">Live TV</param>
+      <param name="limit">12</param>
+      <param name="type">livetv_wide</param>
+      <param name="itemwidth">410</param>
+      <param name="height">300</param>
+      <param name="path">pvr://channels/tv/*</param>
+      <param name="sortby" />
+      <param name="sortorder">descending</param>
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">501</param>
+      <param name="header">broadcasts starting at...</param>
+      <param name="type">tv_runningat_small</param>
+      <param name="itemwidth">260</param>
+      <param name="height">210</param>
+      <param name="path">plugin://script.unfussy.helper/?info=getrunningat&amp;reload=$INFO[Window(Home).Property(widgetreload-runningat)]&amp;pointintime=21:30&amp;channels=[4357, 4601, 4559, 4111, 4929, 4910]</param>
+      <param name="onclick">RunScript(script.unfussy.helper,action=info_runningat&amp;bc_id=$INFO[ListItem.Property(broadcastid)]&amp;c_id=$INFO[ListItem.Property(channelid)])</param>
+      <param name="useonclick">true</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">502</param>
+      <param name="header">TV Recordings</param>
+      <param name="limit">6</param>
+      <param name="type">recordings_small</param>
+      <param name="itemwidth">260</param>
+      <param name="height">210</param>
+      <param name="path">pvr://recordings/tv/active?view=flat</param>
+      <param name="sortby">date</param>
+      <param name="sortorder">descending</param>
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">503</param>
+      <param name="header">smart tvshow playlist</param>
+      <param name="limit">6</param>
+      <param name="type">movies</param>
+      <param name="itemwidth">260</param>
+      <param name="height">425</param>
+      <param name="path">special://masterprofile/playlists/video/Series2.xsp</param>
+      <param name="onclick">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</param>
+      <param name="useonclick">true</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+      <param name="showplaystatus">true</param>
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">504</param>
+      <param name="header">Movies</param>
+      <param name="limit">6</param>
+      <param name="type">movies</param>
+      <param name="itemwidth">260</param>
+      <param name="height">425</param>
+      <param name="path">special://masterprofile/playlists/video/Movies.xsp</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+      <param name="showplaystatus">true</param>
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">505</param>
+      <param name="header">Cartoons</param>
+      <param name="limit">6</param>
+      <param name="type">movies</param>
+      <param name="itemwidth">260</param>
+      <param name="height">425</param>
+      <param name="path">special://masterprofile/playlists/video/Erik.xsp</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+      <param name="showplaystatus">true</param>
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">506</param>
+      <param name="header">smart tvshow playlist</param>
+      <param name="limit">6</param>
+      <param name="type">movies</param>
+      <param name="itemwidth">260</param>
+      <param name="height">425</param>
+      <param name="path">special://masterprofile/playlists/video/SeriesErik2.xsp</param>
+      <param name="onclick">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</param>
+      <param name="useonclick">true</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+      <param name="showplaystatus">true</param>
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">507</param>
+      <param name="header">Made in Adria</param>
+      <param name="limit">5</param>
+      <param name="type">addonpath_thumb_large</param>
+      <param name="itemwidth">310</param>
+      <param name="height">240</param>
+      <param name="path">plugin://plugin.video.hbogoeu/?mode=1&amp;name=Made%20in%20Adria&amp;url=https%3a%2f%2fsiapi.hbogo.eu%2fv8%2fGroup%2fjson%2fENG%2fANMO%2fdda48ff0-bc8e-47e0-85c5-679f7f4a61da%2f0%2f0%2f0%2f0%2f0%2f0%2fTrue</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">508</param>
+      <param name="header">Recently Added Movies</param>
+      <param name="limit">5</param>
+      <param name="type">addonpath_thumb_large</param>
+      <param name="itemwidth">310</param>
+      <param name="height">240</param>
+      <param name="path">plugin://plugin.video.hbogoeu/?mode=1&amp;name=Recently%20Added&amp;url=https%3a%2f%2fsiapi.hbogo.eu%2fv8%2fGroup%2fjson%2fENG%2fANMO%2fe4e2d4d5-1c9a-43a1-89b1-28e75a7f4d7e%2f0%2f0%2f0%2f0%2f0%2f0%2fTrue</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">509</param>
+      <param name="header">KIDS</param>
+      <param name="limit">5</param>
+      <param name="type">addonpath_thumb_large</param>
+      <param name="itemwidth">310</param>
+      <param name="height">240</param>
+      <param name="path">plugin://plugin.video.hbogoeu/?mode=1&amp;name=KIDS&amp;url=https%3a%2f%2fsiapi.hbogo.eu%2fv5%2fGroup%2fjson%2fENG%2fCOMP%2f6c23a96d-337c-4d88-9790-3916731925de%2f0%2f0%2f1%2f1024%2f0%2f0</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">510</param>
+      <param name="header">Addons</param>
+      <param name="type">favorites</param>
+      <param name="itemwidth">260</param>
+      <param name="height">250</param>
+      <param name="path">addons-510</param>
+      <param name="static_content">true</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+    </include>
+    <include content="widget_mainmenu">
+      <param name="id">511</param>
+      <param name="header">weather forecast - next days</param>
+      <param name="type">weather_listitem</param>
+      <param name="itemwidth">260</param>
+      <param name="height">300</param>
+      <param name="path">weather_daily_items</param>
+      <param name="static_content">true</param>
+      <param name="sortby" />
+      <param name="sortorder" />
+    </include>
+  </include>
+  <include name="home_widget_anchors">
+    <control id="500777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,500)</onright>
+      <onright>500</onright>
+      <onleft>9001</onleft>
+      <onup>9001</onup>
+      <ondown>SetFocus(501)</ondown>
+      <onclick>Action(PlayPvrTV)</onclick>
+    </control>
+    <control id="501777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,501)</onright>
+      <onright>501</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(500)</onup>
+      <ondown>SetFocus(502)</ondown>
+      <onclick>ActivateWindow(tvguide)</onclick>
+    </control>
+    <control id="502777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,502)</onright>
+      <onright>502</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(501)</onup>
+      <ondown>SetFocus(503)</ondown>
+      <onclick>ActivateWindow(tvrecordings)</onclick>
+    </control>
+    <control id="503777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,503)</onright>
+      <onright>503</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(502)</onup>
+      <ondown>SetFocus(504)</ondown>
+      <onclick>ActivateWindow(Videos,special://profile/playlists/video/Series2.xsp,return)</onclick>
+    </control>
+    <control id="504777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,504)</onright>
+      <onright>504</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(503)</onup>
+      <ondown>SetFocus(505)</ondown>
+      <onclick>ActivateWindow(Videos,special://profile/playlists/video/Movies.xsp,return)</onclick>
+    </control>
+    <control id="505777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,505)</onright>
+      <onright>505</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(504)</onup>
+      <ondown>SetFocus(506)</ondown>
+      <onclick>ActivateWindow(Videos,special://profile/playlists/video/Erik.xsp,return)</onclick>
+    </control>
+    <control id="506777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,506)</onright>
+      <onright>506</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(505)</onup>
+      <ondown>SetFocus(507)</ondown>
+      <onclick>ActivateWindow(Videos,special://profile/playlists/video/SeriesErik2.xsp,return)</onclick>
+    </control>
+    <control id="507777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,507)</onright>
+      <onright>507</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(506)</onup>
+      <ondown>SetFocus(508)</ondown>
+      <onclick>RunAddon(plugin.video.hbogoeu)</onclick>
+    </control>
+    <control id="508777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,508)</onright>
+      <onright>508</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(507)</onup>
+      <ondown>SetFocus(509)</ondown>
+      <onclick>RunAddon(plugin.video.hbogoeu)</onclick>
+    </control>
+    <control id="509777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,509)</onright>
+      <onright>509</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(508)</onup>
+      <ondown>SetFocus(510)</ondown>
+      <onclick>RunAddon(plugin.video.hbogoeu)</onclick>
+    </control>
+    <control id="510777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,510)</onright>
+      <onright>510</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(509)</onup>
+      <ondown>SetFocus(511)</ondown>
+      <onclick>ActivateWindow(addonbrowser)</onclick>
+    </control>
+    <control id="511777" type="button">
+      <visible allowhiddenfocus="true">false</visible>
+      <onright>SetProperty(active_channel,511)</onright>
+      <onright>511</onright>
+      <onleft>9001</onleft>
+      <onup>SetFocus(510)</onup>
+      <ondown>SetFocus(500)</ondown>
+      <onclick>ActivateWindow(Weather)</onclick>
+    </control>
+  </include>
+  <include name="addons-510">
+    <content>
+      <item>
+        <label>hGO EU</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fplugin.video.hbogoeu%2fresources%2ficon.png/</thumb>
+        <onclick>RunAddon(plugin.video.hbogoeu)</onclick>
+      </item>
+      <item>
+        <label>YouTube</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fplugin.video.youtube%2ficon.png/</thumb>
+        <onclick>RunAddon(plugin.video.youtube)</onclick>
+      </item>
+      <item>
+        <label>Mediaset Play</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fplugin.video.videomediaset%2fresources%2ficon.png/</thumb>
+        <onclick>RunAddon(plugin.video.videomediaset)</onclick>
+      </item>
+      <item>
+        <label>Youtube Music</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fplugin.video.spotitube%2ficon.png/</thumb>
+        <onclick>RunAddon(plugin.video.spotitube)</onclick>
+      </item>
+      <item>
+        <label>RTV Slovenija - arhiv</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fplugin.rtvslo.podcast%2ficon.png/</thumb>
+        <onclick>RunAddon(plugin.rtvslo.podcast)</onclick>
+      </item>
+      <item>
+        <label>SoundCloud</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fplugin.audio.soundcloud%2fresources%2ficon.png/</thumb>
+        <onclick>RunAddon(plugin.audio.soundcloud)</onclick>
+      </item>
+      <item>
+        <label>MixCloud</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fplugin.audio.mixcloud%2ficon.png/</thumb>
+        <onclick>RunAddon(plugin.audio.mixcloud)</onclick>
+      </item>
+      <item>
+        <label>TV Show - Next Aired</label>
+        <thumb>image://%2fstorage%2f.kodi%2faddons%2fscript.tv.show.next.aired%2ficon.png/</thumb>
+        <onclick>RunAddon(script.tv.show.next.aired)</onclick>
+      </item>
+      <item>
+        <label>CoreELEC Configuration</label>
+        <thumb>image://%2fusr%2fshare%2fkodi%2faddons%2fservice.coreelec.settings%2fresources%2fskins%2fDefault%2fmedia%2ficon.png/</thumb>
+        <onclick>RunAddon(service.coreelec.settings)</onclick>
+      </item>
+    </content>
+  </include>
+  <include name="cond_show_updown_arrows">
+    <visible>ControlGroup(9002).HasFocus | Control.HasFocus(500777) | Control.HasFocus(501777) | Control.HasFocus(502777) | Control.HasFocus(503777) | Control.HasFocus(504777) | Control.HasFocus(505777) | Control.HasFocus(506777) | Control.HasFocus(507777) | Control.HasFocus(508777) | Control.HasFocus(509777) | Control.HasFocus(510777) | Control.HasFocus(511777)</visible>
+  </include>
+</includes>

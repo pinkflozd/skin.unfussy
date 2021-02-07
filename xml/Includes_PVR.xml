@@ -176,6 +176,18 @@
                             <info>PVR.TimeshiftProgressBufferEnd</info>
                             <texturebg colordiffuse="00FFFFFF">colors/white.png</texturebg>
                             <midtexture colordiffuse="timeshiftbar">colors/white.png</midtexture>
+                            <visible>!Player.ChannelPreviewActive</visible>
+                        </control>
+                        <control type="ranges">
+                            <top>120</top>
+                            <left>350</left>
+                            <width>1190</width>
+                            <height>5</height>
+                            <texturebg colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+                            <lefttexture>colors/white.png</lefttexture>
+                            <midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+                            <righttexture>colors/white.png</righttexture>
+                            <info>Player.Cutlist</info>
                         </control>
                         <control type="slider" id="403">
                             <top>109</top>
@@ -187,7 +199,7 @@
                             <textureslidernibfocus colordiffuse="active">colors/white.png</textureslidernibfocus>
                         </control>
                         <control type="label">
-                            <visible>PVR.IsTimeShift</visible>
+                            <visible>!Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
                             <top>130</top>
                             <right>380</right>
                             <align>right</align>

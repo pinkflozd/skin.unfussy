@@ -138,6 +138,26 @@
                     <midtexture colordiffuse="active" border="6,3,6,3">progress/texturebg_white.png</midtexture>
                     <info>Player.Progress</info>
                 </control>
+                <control type="ranges">
+                    <left>0</left>
+                    <top>75</top>
+                    <width>100%</width>
+                    <height>7</height>
+                    <texturebg colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+                    <lefttexture>colors/white.png</lefttexture>
+                    <midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+                    <righttexture>colors/white.png</righttexture>
+                    <info>Player.Cutlist</info>
+                </control>
+                <control type="ranges">
+                    <left>0</left>
+                    <top>75</top>
+                    <width>100%</width>
+                    <height>7</height>
+                    <texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				    <righttexture>colors/white.png</righttexture>
+				    <info>Player.Chapters</info>
+                </control>
                 <control type="slider" id="401">
                     <left>0</left>
                     <top>65</top>
@@ -491,6 +511,7 @@
                 <action>seek</action>
                 <visible>Control.HasFocus(87)</visible>
             </control>
+
         </control>
     </include>
 
