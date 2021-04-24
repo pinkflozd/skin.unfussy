@@ -187,7 +187,7 @@
                             <textureslidernibfocus colordiffuse="active">colors/white.png</textureslidernibfocus>
                         </control>
                         <control type="label">
-                            <visible>PVR.IsTimeShift</visible>
+                            <visible>!Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
                             <top>130</top>
                             <right>380</right>
                             <align>right</align>
