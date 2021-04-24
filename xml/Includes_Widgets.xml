@@ -528,7 +528,7 @@
                     <top>1</top>
                     <width>248</width>
                     <height>179</height>
-                    <aspectratio aligny="top" align="center">keep</aspectratio>
+                    <aspectratio aligny="top" align="center">scale</aspectratio>
                     <texture>$INFO[ListItem.EPGEventIcon]</texture>
                 </control>
                 <control type="image">
@@ -537,7 +537,7 @@
                     <top>1</top>
                     <width>248</width>
                     <height>179</height>
-                    <aspectratio aligny="top" align="center">keep</aspectratio>
+                    <aspectratio aligny="center" align="center">keep</aspectratio>
                     <texture>$INFO[ListItem.Icon]</texture>
                 </control>
                 <control type="group">
