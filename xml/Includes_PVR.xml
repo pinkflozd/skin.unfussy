@@ -2396,7 +2396,7 @@
                 <height>36</height>
                 <font>regular18</font>
                 <label>$INFO[ListItem.StartTime] $INFO[ListItem.EndTime,- ,]</label>
-                <visible>!ListItem.HasTimer + !ListItem.HasTimerSchedule + !ListItem.IsRecording + !ListItem.HasArchive + !ListItem.IsResumable</visible>
+                <visible>!ListItem.HasTimer + !ListItem.HasTimerSchedule + !ListItem.IsRecording + !ListItem.HasArchive + !ListItem.IsResumable + !ListItem.IsPlayable</visible>
             </control>
             <control type="label" id="1">
                 <left>30</left>
@@ -2405,7 +2405,7 @@
                 <height>36</height>
                 <font>regular18</font>
                 <label>$INFO[ListItem.StartTime] $INFO[ListItem.EndTime,- ,]</label>
-                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable</visible>
+                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable | ListItem.IsPlayable</visible>
             </control>
             <control type="image">
                 <top>0</top>
@@ -2414,7 +2414,7 @@
                 <height>40</height>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="red">overlays/overlayunwatched.png</texture>
-                <visible>[ ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable ] + !ListItem.HasReminder</visible>
+                <visible>[ ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable ] + [ !ListItem.HasReminder | !ListItem.IsPlayable]</visible>
             </control>
             <control type="image">
                 <top>5</top>
@@ -2433,6 +2433,15 @@
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="red">icons/buttons/play.png</texture>
                 <visible>ListItem.HasArchive</visible>
+            </control>
+            <control type="image">
+                <top>5</top>
+                <left>0</left>
+                <width>30</width>
+                <height>30</height>
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="red">icons/buttons/play.png</texture>
+                <visible>ListItem.IsPlayable</visible>
             </control>
             <control type="image">
                 <top>5</top>
@@ -3465,7 +3474,7 @@
                 <label>$INFO[ListItem.StartTime]</label>
             </control>
             <control type="label">
-                <visible>![ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable]</visible>
+                <visible>![ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable | ListItem.IsPlayable]</visible>
                 <left>120</left>
                 <right>20</right>
                 <aligny>center</aligny>
@@ -3473,7 +3482,7 @@
                 <label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, - ,]</label>
             </control>
             <control type="group">
-                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable</visible>
+                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive | ListItem.IsResumable | ListItem.IsPlayable</visible>
                 <control type="image">
                     <top>30</top>
                     <left>110</left>
