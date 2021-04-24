@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1108">
+    <onload>Dialog.Close(fullscreeninfo,true)</onload>
+    <visible>VideoPlayer.HasEpg + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(livetv) + [Integer.IsGreater(PVR.EpgEventDuration(mm),05) | Integer.IsGreater(PVR.EpgEventDuration(hh),00)]</visible>
+    <visible>!Window.IsVisible(videoosd) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(pvrchannelguide) + !Window.IsVisible(fullscreeninfo)</visible>
+    <controls>
+    <!-- NextUp Notification -->
+        <control type="group">
+            <visible>Integer.IsLessOrEqual(PVR.EpgEventElapsedTime(secs),20) + System.IdleTime(20)</visible>
+            <left>1480</left>
+            <top>700</top>
+            <animation effect="slide" start="500,0" end="0,0" time="300" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="500,0" start="0,0" time="300" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" end="500,0" start="0,0" time="300" tween="quadratic">Hidden</animation>
+            <width>420</width>
+            <height>324</height>
+            <control type="group">
+                <width>420</width>
+                <height>372</height>
+                <include>background</include>
+            </control>
+            <control type="image">
+                <top>15</top>
+                <left>10</left>
+                <width>84</width>
+                <height>56</height>
+                <aspectratio align="center" aligny="center">keep</aspectratio>
+                <texture>$INFO[Player.Art(thumb)]</texture>
+                <visible>!String.IsEmpty(PVR.EpgEventIcon)</visible>
+            </control>
+            <control type="label">
+                <left>10</left>
+                <width>400</width>
+                <top>25</top>
+                <height>36</height>
+                <aligny>center</aligny>
+                <align>center</align>
+                <textoffsetx>5</textoffsetx>
+                <font>font12</font>
+                <label>NextUp</label>
+            </control>
+            <control type="image">
+                <top>76</top>
+                <left>10</left>
+                <width>400</width>
+                <height>200</height>
+                <aspectratio align="center" aligny="center">keep</aspectratio>
+                <texture>$INFO[Player.Art(thumb)]</texture>
+                <visible>String.IsEmpty(PVR.EpgEventIcon)</visible>
+            </control>
+            <control type="image">
+                <top>76</top>
+                <left>10</left>
+                <width>400</width>
+                <height>200</height>
+                <aspectratio align="center" aligny="center">keep</aspectratio>
+                <texture>$INFO[PVR.EpgEventIcon]</texture>
+                <visible>!String.IsEmpty(PVR.EpgEventIcon)</visible>
+            </control>
+            <control type="group">
+                <visible>!String.IsEmpty(VideoPlayer.Plotoutline) | !String.IsEmpty(VideoPlayer.Plot)</visible>
+                <control type="label">
+                    <top>280</top>
+                    <width>420</width>
+                    <height>48</height>
+                    <font>font15</font>
+                    <shadowcolor>black</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textoffsetx>5</textoffsetx>
+                    <scroll>true</scroll>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                </control>
+                <control type="label">
+                    <top>330</top>
+                    <width>420</width>
+                    <height>28</height>
+                    <font>font12</font>
+                    <shadowcolor>black</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textoffsetx>5</textoffsetx>
+                    <scroll>true</scroll>
+                    <label>($INFO[VideoPlayer.Plotoutline])</label>
+                    <visible>!String.IsEmpty(VideoPlayer.Plotoutline)</visible>
+                </control>
+                <control type="label">
+                    <top>330</top>
+                    <width>420</width>
+                    <height>28</height>
+                    <font>font12</font>
+                    <shadowcolor>black</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textoffsetx>5</textoffsetx>
+                    <scroll>true</scroll>
+                    <label>($INFO[VideoPlayer.Plot])</label>
+                    <visible>String.IsEmpty(VideoPlayer.Plotoutline)</visible>
+                </control>
+            </control>
+            <control type="label">
+                <top>300</top>
+                <width>420</width>
+                <height>48</height>
+                <visible>String.IsEmpty(VideoPlayer.Plotoutline) + String.IsEmpty(VideoPlayer.Plot)</visible>
+                <font>font15</font>
+                <shadowcolor>black</shadowcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textoffsetx>5</textoffsetx>
+                <scroll>true</scroll>
+                <label>$INFO[VideoPlayer.Title]</label>
+            </control>
+        </control>
+    </controls>
+</window>
