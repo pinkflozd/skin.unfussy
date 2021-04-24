@@ -1327,7 +1327,7 @@
         <value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0)">overlays/resume.png</value>
         <value condition="ListItem.IsResumable">overlays/resume.png</value>
         <value condition="Integer.IsGreater(ListItem.PlayCount,0)">overlays/$INFO[ListItem.Overlay]</value>
-        <value condition="ListItem.IsResumable">overlays/resume.png</value>
+        <value condition="ListItem.IsPlayable">overlays/resume.png</value>
         <!--<value condition="ListItem.IsCollection">overlays/set.png</value>-->
     </variable>
     <variable name="SetOverlayVar">

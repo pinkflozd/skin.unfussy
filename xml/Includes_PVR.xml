@@ -1655,7 +1655,16 @@
                 <texture colordiffuse="red">icons/buttons/launch.png</texture>
             </control>
             <control type="image">
-                <visible>!ListItem.HasReminder + !String.IsEmpty(ListItem.Title)</visible>
+                <visible>![ListItem.IsRecording | ListItem.HasTimer] + ListItem.IsPlayable</visible>
+                <top>5</top>
+                <right>5</right>
+                <width>30</width>
+                <height>30</height>
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="red">icons/buttons/play.png</texture>
+            </control>
+            <control type="image">
+                <visible>![ ListItem.HasReminder | ListItem.IsPlayable ] + !String.IsEmpty(ListItem.Title)</visible>
                 <top>5</top>
                 <right>-5</right>
                 <width>50</width>
@@ -2405,7 +2414,7 @@
                 <height>36</height>
                 <font>regular18</font>
                 <label>$INFO[ListItem.StartTime] $INFO[ListItem.EndTime,- ,]</label>
-                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.IsPlayable</visible>
+                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasReminder | ListItem.IsPlayable</visible>
             </control>
             <control type="image">
                 <top>0</top>
