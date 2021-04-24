@@ -2424,6 +2424,15 @@
                 <texture colordiffuse="red">icons/buttons/launch.png</texture>
                 <visible>ListItem.HasReminder</visible>
             </control>
+            <control type="image">
+                <top>5</top>
+                <left>0</left>
+                <width>30</width>
+                <height>30</height>
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="red">icons/buttons/play.png</texture>
+                <visible>ListItem.HasArchive</visible>
+            </control>
             <control type="label" id="1">
                 <visible>!String.IsEqual(Container.ViewMode,$LOCALIZE[31139])</visible>
                 <left>6</left>
