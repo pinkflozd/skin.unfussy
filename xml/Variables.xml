@@ -211,6 +211,7 @@
         <value condition="ListItem.IsPlaying">overlays/overlayplaying.png</value>
         <value condition="ListItem.IsResumable">overlays/resume.png</value>
         <value condition="ListItem.HasArchive">overlays/resume.png</value>
+        <value condition="ListItem.IsPlayable">overlays/resume.png</value>
         <value>overlays/$INFO[ListItem.Overlay]</value>
     </variable>
 
