@@ -210,6 +210,7 @@
         <value condition="ListItem.IsRecording">icons/pvr/pvr-isrecording.png</value>
         <value condition="ListItem.IsPlaying">overlays/overlayplaying.png</value>
         <value condition="ListItem.IsResumable">overlays/resume.png</value>
+        <value condition="ListItem.HasArchive">overlays/resume.png</value>
         <value>overlays/$INFO[ListItem.Overlay]</value>
     </variable>
 
