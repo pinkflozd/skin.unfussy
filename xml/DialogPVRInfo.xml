@@ -236,6 +236,7 @@
                     <param name="id">8</param>
                     <param name="visible">Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo)</param>
                     <param name="icon">icons/buttons/play.png</param>
+                    <param name="onclick">Back</param>
                     <param name="radius">100</param>
                     <param name="iconsize">50</param>
                     <param name="iconoffset">25</param>
