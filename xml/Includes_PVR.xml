@@ -2413,7 +2413,7 @@
                 <height>40</height>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="red">overlays/overlayunwatched.png</texture>
-                <visible>[ ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording ] + !ListItem.HasReminder</visible>
+                <visible>[ ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasArchive ] + !ListItem.HasReminder</visible>
             </control>
             <control type="image">
                 <top>5</top>
