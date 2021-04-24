@@ -197,6 +197,7 @@
                             <texturesliderbar colordiffuse="00FFFFFF">progress/nub_bar.png</texturesliderbar>
                             <textureslidernib colordiffuse="active">progress/nub_bar.png</textureslidernib>
                             <textureslidernibfocus colordiffuse="active">colors/white.png</textureslidernibfocus>
+                            <visible>!Player.ChannelPreviewActive</visible>
                         </control>
                         <control type="label">
                             <visible>!Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
