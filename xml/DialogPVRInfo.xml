@@ -224,15 +224,6 @@
                 <onup condition="!String.StartsWith(ListItem.FolderPath,pvr://recordings)">100001</onup>
                 <onup condition="String.StartsWith(ListItem.FolderPath,pvr://recordings)">200001</onup>
                 <include content="button_round">
-                    <param name="id">102</param>
-                    <param name="onclick">Back</param>
-                    <param name="onclick2"></param>
-                    <param name="icon">icons/buttons/close.png</param>
-                    <param name="radius">100</param>
-                    <param name="iconsize">60</param>
-                    <param name="iconoffset">20</param>
-                </include>
-                <include content="button_round">
                     <param name="id">8</param>
                     <param name="visible">Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo)</param>
                     <param name="icon">icons/buttons/play.png</param>
@@ -240,6 +231,15 @@
                     <param name="radius">100</param>
                     <param name="iconsize">50</param>
                     <param name="iconoffset">25</param>
+                </include>
+                <include content="button_round">
+                    <param name="id">102</param>
+                    <param name="onclick">Back</param>
+                    <param name="onclick2"></param>
+                    <param name="icon">icons/buttons/close.png</param>
+                    <param name="radius">100</param>
+                    <param name="iconsize">60</param>
+                    <param name="iconoffset">20</param>
                 </include>
                 <include content="button_round">
                     <param name="id">6</param>
