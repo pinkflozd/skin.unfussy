@@ -2405,7 +2405,7 @@
                 <height>36</height>
                 <font>regular18</font>
                 <label>$INFO[ListItem.StartTime] $INFO[ListItem.EndTime,- ,]</label>
-                <visible>!ListItem.HasTimer + !ListItem.HasTimerSchedule + !ListItem.IsRecording + !ListItem.IsPlayable</visible>
+                <visible>!ListItem.HasTimer + !ListItem.HasTimerSchedule + !ListItem.IsRecording + !ListItem.HasRecording</visible>
             </control>
             <control type="label" id="1">
                 <left>30</left>
@@ -2414,7 +2414,7 @@
                 <height>36</height>
                 <font>regular18</font>
                 <label>$INFO[ListItem.StartTime] $INFO[ListItem.EndTime,- ,]</label>
-                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasReminder | ListItem.IsPlayable</visible>
+                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasReminder | ListItem.HasRecording</visible>
             </control>
             <control type="image">
                 <top>0</top>
@@ -2423,7 +2423,7 @@
                 <height>40</height>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="red">overlays/overlayunwatched.png</texture>
-                <visible>[ ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording ] + ![ ListItem.HasReminder | ListItem.IsPlayable ]</visible>
+                <visible>[ ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording ] + ![ ListItem.HasReminder | ListItem.HasRecording ]</visible>
             </control>
             <control type="image">
                 <top>5</top>
@@ -2441,6 +2441,7 @@
                 <height>30</height>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="red">icons/buttons/play.png</texture>
+                <visible>![ListItem.IsRecording | ListItem.HasTimer] + ListItem.HasRecording</visible>
             </control>
             <control type="label" id="1">
                 <visible>!String.IsEqual(Container.ViewMode,$LOCALIZE[31139])</visible>
