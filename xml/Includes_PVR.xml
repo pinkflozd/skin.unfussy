@@ -1655,7 +1655,7 @@
                 <texture colordiffuse="red">icons/buttons/launch.png</texture>
             </control>
             <control type="image">
-                <visible>![ListItem.IsRecording | ListItem.HasTimer] + ListItem.IsPlayable</visible>
+                <visible>![ListItem.IsRecording | ListItem.HasTimer] + ListItem.HasRecording</visible>
                 <top>5</top>
                 <right>5</right>
                 <width>30</width>
@@ -1664,7 +1664,7 @@
                 <texture colordiffuse="red">icons/buttons/play.png</texture>
             </control>
             <control type="image">
-                <visible>![ ListItem.HasReminder | ListItem.IsPlayable ] + !String.IsEmpty(ListItem.Title)</visible>
+                <visible>![ ListItem.HasReminder | ListItem.HasRecording ] + !String.IsEmpty(ListItem.Title)</visible>
                 <top>5</top>
                 <right>-5</right>
                 <width>50</width>
@@ -3465,7 +3465,7 @@
                 <label>$INFO[ListItem.StartTime]</label>
             </control>
             <control type="label">
-                <visible>![ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.IsPlayable]</visible>
+                <visible>![ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasRecording]</visible>
                 <left>120</left>
                 <right>20</right>
                 <aligny>center</aligny>
@@ -3473,7 +3473,7 @@
                 <label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, - ,]</label>
             </control>
             <control type="group">
-                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.IsPlayable</visible>
+                <visible>ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.IsRecording | ListItem.HasRecording</visible>
                 <control type="image">
                     <top>30</top>
                     <left>110</left>
