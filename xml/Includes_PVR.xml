@@ -2441,7 +2441,6 @@
                 <height>30</height>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="red">icons/buttons/play.png</texture>
-                <visible>![ListItem.IsRecording | ListItem.HasTimer] + ListItem.IsPlayable</visible>
             </control>
             <control type="label" id="1">
                 <visible>!String.IsEqual(Container.ViewMode,$LOCALIZE[31139])</visible>
