@@ -140,9 +140,9 @@
                 </control>
                 <control type="ranges">
                     <left>0</left>
-                    <top>75</top>
+                    <top>72</top>
                     <width>100%</width>
-                    <height>7</height>
+                    <height>8</height>
                     <texturebg colordiffuse="00FFFFFF">colors/white50.png</texturebg>
                     <lefttexture>colors/white.png</lefttexture>
                     <midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
@@ -151,9 +151,9 @@
                 </control>
                 <control type="ranges">
                     <left>0</left>
-                    <top>75</top>
+                    <top>72</top>
                     <width>100%</width>
-                    <height>7</height>
+                    <height>8</height>
                     <texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
                     <righttexture>colors/white.png</righttexture>
                     <info>Player.Chapters</info>
