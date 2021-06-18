@@ -58,7 +58,7 @@
                 <bottom>20</bottom>
                 <width>400</width>
                 <height>400</height>
-                <texture fallback="defaultmusicalbums.png">$INFO[Player.Art(album.thumb)]</texture>
+                <texture fallback="defaultmusicalbums.png">$INFO[Player.Art(thumb)]</texture>
                 <bordertexture colordiffuse="border">colors/black.png</bordertexture>
                 <bordersize>1</bordersize>
             </control>
